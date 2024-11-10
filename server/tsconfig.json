@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    /* Opções básicas */
+    "target": "ESNext", // Transpila o código para ES6, suportado pelo Node.js
+    "module": "CommonJS", // Usa o módulo CommonJS, padrão para Node.js
+    "lib": ["es6"], // Inclui as bibliotecas ES6 para funcionalidades atualizadas
+    "outDir": "./dist", // Pasta de saída dos arquivos compilados (JavaScript)
+    "rootDir": "./src", // Define a pasta raiz do código TypeScript
+    "strict": true, // Ativa o modo de checagem estrita para maior segurança
+    "esModuleInterop": true, // Habilita interoperabilidade com módulos ES6 e CommonJS
+    "skipLibCheck": true, // Pula verificação de tipos em arquivos de bibliotecas
+    "forceConsistentCasingInFileNames": true, // Garante consistência no uso de maiúsculas/minúsculas nos imports
+    "allowSyntheticDefaultImports": true,
+    /* Suporte para Desenvolvimento */
+    "sourceMap": true, // Gera arquivos .map para facilitar o debug
+    "noImplicitAny": true, // Exige definição de tipo explícito para valores do tipo 'any'
+
+    /* Opções de Módulo */
+    "resolveJsonModule": true // Permite importar arquivos JSON
+  },
+  "include": ["src/**/*.ts"], // Inclui todos os arquivos .ts na pasta src
+  "exclude": ["node_modules", "dist"] // Exclui a pasta node_modules e dist do processo de compilação
+}
