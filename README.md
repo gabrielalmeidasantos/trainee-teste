@@ -10,7 +10,7 @@ Esse projeto esta divido em 2 pastas:
 server --  aqui fica os arquivos do servidor em Node.js
 ```
 
-[Ver](https://github.com/gabrielalmeidasantos/trainee-teste/tree/main/server)
+[Ver arquivos/readme do servidor](https://github.com/gabrielalmeidasantos/trainee-teste/tree/main/server)
 
 ou
 
@@ -18,4 +18,4 @@ ou
 client -- aqui fica os arquivos do frontend em React.js
 ```
 
-[Ver](https://github.com/gabrielalmeidasantos/trainee-teste/tree/main/client)
+[Ver arquivos/readme do cliente](https://github.com/gabrielalmeidasantos/trainee-teste/tree/main/client)
