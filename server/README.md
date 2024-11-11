@@ -4,7 +4,7 @@
 
 ### Requisitos funcionais
 
-A aplicação precisa ser uma API que terá algumas rotas para fazer o CRUD de tarefas edeverá armazenar/consultar os cadastros em uma base de dados SQL:
+A aplicação precisa ser uma API que terá algumas rotas para fazer o CRUD de tarefas e deverá armazenar/consultar os cadastros em uma base de dados SQL:
 
 - [x]  Adicionar, Atualizar e Deletar tarefas
 - [x]  Marcar tarefas como "pending", "in_progress", "done"

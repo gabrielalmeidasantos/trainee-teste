@@ -19,7 +19,7 @@ app.use(express.json());
     apis: ['./src/routes/*.ts'],
   };
   const swaggerDocs = swaggerJsdoc(swaggerOptions);
-  app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+  app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
   app.use('/tasks', taskRoutes);
 

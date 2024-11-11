@@ -28,8 +28,6 @@ export async function createTask(req: Request, res: Response): Promise<void> {
     if (error instanceof z.ZodError) {
       res.status(400).json({ error: error.errors });
     } else {
-      console.log(error);
-
       res.status(500).json({ error: 'Erro ao criar a tarefa' });
     }
   }
