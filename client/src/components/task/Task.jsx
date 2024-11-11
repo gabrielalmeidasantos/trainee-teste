@@ -19,23 +19,31 @@ const Task = ({ item, setData }) => {
       <div className="col-sm-6 mb-3 mb-sm-0">
         <div className="card">
           <div className="card-body">
+            <div className="d-flex justify-content-end">
+              <span
+                style={{ textTransform: "capitalize" }}
+                className={`badge rounded-pill 
+              ${item.status == "pending" && "text-bg-warning"} 
+              ${item.status == "in_progress" && "text-bg-info"}
+              ${item.status == "done" && "text-bg-success"}`}
+              >
+                {item.status}
+              </span>
+            </div>
             <h5 className="card-title">{item.name}</h5>
             <p className="card-text">{item.description}</p>
-            <span className="badge rounded-pill text-bg-info">
-              {item.status}
-            </span>
             <hr />
             <div className="row" style={{ gap: "1rem", padding: ".5rem" }}>
               <Link
                 to={`/edit/${item.id}`}
-                className="btn btn-primary"
+                className="btn btn-outline-primary"
                 style={{ width: "fit-content" }}
               >
                 Edit task
               </Link>
               <button
                 onClick={deleteTask}
-                className="btn btn-danger"
+                className="btn btn-outline-danger"
                 style={{ width: "fit-content" }}
               >
                 Delete task

@@ -1,19 +1,14 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Navbar from "../../components/navbar/Navbar";
-import { Link, useParams } from "react-router-dom";
-import Toast from "../../components/toast/Toast";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 const EditTask = () => {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [status, setStatus] = useState("pending");
-
-  const [showToast, setShowToast] = useState(false);
-  const [toastMessage, setToastMessage] = useState("");
-  const [toastType, setToastType] = useState("success");
-
   const { id } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
     (async () => {
@@ -38,22 +33,11 @@ const EditTask = () => {
         status,
       });
 
-      setToastMessage("Updated!");
-      setToastType("success");
-      setShowToast(true);
+      navigate("/");
     } catch (error) {
-      setToastMessage("Failed.");
-      setToastType("error");
-      setShowToast(true);
       console.log(error);
     }
   }
-
-  useEffect(() => {
-    return () => {
-      setShowToast(false);
-    };
-  }, []);
 
   return (
     <>
@@ -107,13 +91,6 @@ const EditTask = () => {
           </form>
         </div>
       </div>
-
-      <Toast
-        message={toastMessage}
-        type={toastType}
-        show={showToast}
-        onClose={() => setShowToast(false)}
-      />
     </>
   );
 };
